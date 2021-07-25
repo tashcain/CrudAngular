@@ -1,0 +1,6 @@
+<app-add-blog (onAddBlog)="addBlog($event)"></app-add-blog>
+<app-blog-item
+  (onDeleteBlog)="deleteBlog(blog)"
+  *ngFor="let blog of blogs"
+  [blog]="blog"
+></app-blog-item>

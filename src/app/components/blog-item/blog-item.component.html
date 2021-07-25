@@ -1,0 +1,20 @@
+<div class="task">
+  <h3>
+    {{ blog.title }}
+    <div>
+      <fa-icon
+        routerLink="edit/?id={{ blog.id }}"
+        (click)="onEdit(blog)"
+        [ngStyle]="{ padding: '8px', color: 'green' }"
+        [icon]="faEdit"
+      ></fa-icon>
+      <fa-icon
+        (click)="onDelete(blog)"
+        [ngStyle]="{ color: 'red' }"
+        [icon]="faTimes"
+      ></fa-icon>
+    </div>
+  </h3>
+  <p>{{ blog.auther }}</p>
+  <p>{{ blog.content }}</p>
+</div>
